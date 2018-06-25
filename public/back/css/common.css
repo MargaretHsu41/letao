@@ -12,6 +12,9 @@ ul{
   padding: 0;
 }
 
+.red{
+  color:#A94442;
+}
 .body_bg{
   background-color: #222D32;
 }
@@ -34,8 +37,21 @@ ul{
   top:0;
   background: #222D32;
   z-index: 999;
+  transition: all 1s;
 }
-
+.lt_main .lt_topbar,
+.lt_main{
+  transition: all 1s;
+}
+.lt_aside.hidemenu{
+  left:-180px;
+}
+.lt_main .lt_topbar.hidemenu{
+  padding-left:0px;
+}
+.lt_main.hidemenu{
+  padding-left:0px;
+}
 .lt_aside .brand {
   height: 50px;
   background-color: #367FA9;

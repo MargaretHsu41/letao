@@ -129,3 +129,9 @@ ul{
 .container-fluid .breadcrumb{
   margin-top:20px;
 }
+
+.echarts_1,
+.echarts_2{
+  width:48%;
+  height:400px;
+}

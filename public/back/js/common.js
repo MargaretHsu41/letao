@@ -14,7 +14,7 @@ $.ajax({
     if(info.error === 400){
       location.href="login.html"
     }else{
-      console.log("成功了");
+      //console.log("成功了");
     }
   }
 })

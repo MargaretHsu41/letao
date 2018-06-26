@@ -11,7 +11,9 @@ ul{
   margin: 0;
   padding: 0;
 }
-
+.md_20{
+  margin-bottom:20px;
+}
 .red{
   color:#A94442;
 }

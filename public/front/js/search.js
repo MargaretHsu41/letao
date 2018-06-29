@@ -60,9 +60,42 @@ $(function(){
     //存储数据并渲染
     localStorage.setItem("search_list",JSON.stringify(arr));
     render();
+  });
 
+
+
+//功能4:添加搜索记录功能
+//  给搜索添加点击事件,获取搜索框中的内容,存到search_list数组最前面,重新存储到localStorage,再渲染
+//判断是否为空,判断是否是重复数组,如果搜索内容超过10,则删除最早的
+  $('.search_btn').click(function(){
+    //获取搜索框中的内容
+    var key = $('.search_input').val(); //????w为啥么不能text
+    //非空判断,如果输入为空,提示用户输入
+    if( key === ""){
+      mui.toast("请输入搜索关键字");
+      return;  //???????为什么要return
+    }
+    //获取数组
+    var arr = getHistory();
+    //判断搜索关键词是否有过,并记录下arr.indexOf返回的值,如果返回是-1,则无重复,如果大于-1,则是重复项的下标,则有重复项,
+    var index = arr.indexOf( key );
+    if (index > -1){
+      arr.splice(index ,1);
+    }
+    //长度判断
+    if( arr.length >= 10){
+      arr.pop();
+    }
+    arr.unshift( key );
+    localStorage.setItem("search_list",JSON.stringify(arr));
+    render();
+
+    //输入完成后需要清空input框
+    $('.search_input').val("");
+
+    //最后根据输入的信息进行页面跳到商品页面
+    location.href="searchList.html?key="+key;
   })
-
 
 
 

@@ -4,7 +4,6 @@
   height: 100%;
   /*区域滚动,父容器要定位*/
   position: relative;
-  background-color: pink;
 }
 .lt_category_left li a{
   border-right: 1px solid #ccc;
@@ -17,7 +16,7 @@
   background-color: #E3E4E5;
   color:#666;
 }
-.lt_category_left li.current a{
+.lt_category_left li a.current{
   background-color: #fff;
   border-right:none;
 }

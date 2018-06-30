@@ -69,11 +69,11 @@ $(function(){
 //判断是否为空,判断是否是重复数组,如果搜索内容超过10,则删除最早的
   $('.search_btn').click(function(){
     //获取搜索框中的内容
-    var key = $('.search_input').val(); //????w为啥么不能text
+    var key = $('.search_input').val();
     //非空判断,如果输入为空,提示用户输入
     if( key === ""){
       mui.toast("请输入搜索关键字");
-      return;  //???????为什么要return
+      return;
     }
     //获取数组
     var arr = getHistory();

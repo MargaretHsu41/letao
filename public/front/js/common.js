@@ -11,7 +11,7 @@ $(function (){
 });
 
 //解析地址栏参数
-function getSearchObj (){
+function getSearch ( name ){
   //获取地址栏?后面的拼接
   var search = location.search;
   //解码成中文
@@ -27,5 +27,5 @@ function getSearchObj (){
     var value = v.split("=")[1];
     obj[key]=value;
   })
-  return obj;
+  return obj[name];
 }

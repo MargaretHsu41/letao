@@ -39,69 +39,17 @@
 
         <!--商品区域-->
         <div class="lt_product">
+          <!--加载图标-->
+          <div class="loading"></div>
           <ul>
+            <!--挖个坑-->
             <li class="lt_product_item">
               <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
+                <img src="./image/none.png" alt="">
+                <p class="mui-ellipsis-2">123</p>
                 <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
-                </p>
-                <button class="mui-btn mui-btn-primary">立即购买</button>
-              </a>
-            </li>
-            <li class="lt_product_item">
-              <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
-                </p>
-                <button class="mui-btn mui-btn-primary">立即购买</button>
-              </a>
-            </li>
-            <li class="lt_product_item">
-              <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
-                </p>
-                <button class="mui-btn mui-btn-primary">立即购买</button>
-              </a>
-            </li>
-            <li class="lt_product_item">
-              <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
-                </p>
-                <button class="mui-btn mui-btn-primary">立即购买</button>
-              </a>
-            </li>
-            <li class="lt_product_item">
-              <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
-                </p>
-                <button class="mui-btn mui-btn-primary">立即购买</button>
-              </a>
-            </li>
-            <li class="lt_product_item">
-              <a href="#">
-                <img src="./image/product.jpg" alt="">
-                <p class="mui-ellipsis-2">匡威三星标1970s converse复刻 142334c 144757c三星标黑色高帮</p>
-                <p>
-                  <span class="oldPrice">¥560</span>
-                  <span class="price">¥560</span>
+                  <span class="oldPrice">¥12</span>
+                  <span class="price">¥12</span>
                 </p>
                 <button class="mui-btn mui-btn-primary">立即购买</button>
               </a>
@@ -145,9 +93,21 @@
 </div>
 
 
-
-
-
+<script type="text/html" id="tpl">
+  {{ each data v i}}
+  <li class="lt_product_item">
+      <a href="#">
+        <!--img-->
+      <p class="mui-ellipsis-2">{{ v.proName }}</p>
+  <p>
+  <span class="oldPrice">¥{{ v.oldPrice }}</span>
+      <span class="price">¥{{ v.price }}</span>
+      </p>
+      <button class="mui-btn mui-btn-primary">立即购买</button>
+      </a>
+      </li>
+  {{ /each }}
+</script>
 
 
 

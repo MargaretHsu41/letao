@@ -185,8 +185,10 @@ $(".dropdown-menu").on("click","a",function(){
       //data.result打印出来的是picAddr和picName
       //获取url
       var picUrl = data.result.picAddr;
+      console.log(picUrl);
       //给数组中添加图片地址
       picArr.unshift(data.result);
+
       //给结构中添加img标签
       $('.imgBox').prepend('<img src="'+ picUrl +'" width="100" height="100">');
       //如果长度大于3.要删除最后一张
@@ -200,6 +202,7 @@ $(".dropdown-menu").on("click","a",function(){
       if(picArr.length === 3){
         $('#form').data('bootstrapValidator').updateStatus('picStatus','VALID');
       }
+      //console.log(picArr);
     }
 
   });
@@ -211,9 +214,10 @@ $(".dropdown-menu").on("click","a",function(){
     e.preventDefault();
 //传输的数据不仅有表单信息,还有图片地址,要拼接到一起
     var paramStr = $('#form').serialize();
-    paramStr += "&picAddr1=" + picArr[0].picAddr + "&picName1" +picArr[0].picName;
-    paramStr += "&picAddr2=" + picArr[1].picAddr + "&picName2" +picArr[1].picName;
-    paramStr += "&picAddr3=" + picArr[2].picAddr + "&picName3" +picArr[2].picName;
+    paramStr += "&picAddr1=" + picArr[0].picAddr + "&picName1=" +picArr[0].picName;
+    paramStr += "&picAddr2=" + picArr[1].picAddr + "&picName2=" +picArr[1].picName;
+    paramStr += "&picAddr3=" + picArr[2].picAddr + "&picName3=" +picArr[2].picName;
+    console.log(paramStr)
     $.ajax({
       type:"post",
       url:"/product/addProduct",

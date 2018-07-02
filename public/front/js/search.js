@@ -50,7 +50,7 @@ $(function(){
   //把删除过后的数据存储到localStorage
   //重新渲染
   $('.lt_history').on("click",".icon_delete",function(){
-    //获取当前点击的xiabiao
+    //获取当前点击的下标
     var index = $(this).data("index");
     console.log(index);
     //获取数据的数组
